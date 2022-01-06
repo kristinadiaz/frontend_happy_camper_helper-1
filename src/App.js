@@ -48,8 +48,6 @@ export default function App() {
 
   function handleNewItem(){
     setSeasonsSelected([])
-    setAddedItems(itemsTrue())
-
   }
 
   function handleAddItem(item){
@@ -93,7 +91,22 @@ export default function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log('You Clicked Me!')
+
+  //   fetch("http://localhost:9292/items", {
+  //     method: 'POST',
+  //     headers:  {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       name: name,
+  //       description: description,
+  //       shopping_url: shopping_url,
+  //       image_url: image_url,
+  //     }),
+  //   })
+  //   .then((resp) => resp.json())
+  //   .then((newItem) => ())
+  // }
 }
 
   return (
@@ -111,9 +124,6 @@ export default function App() {
       <Row>
         <NewItem handleSubmit={handleSubmit}/>
         <MyList addedItems={addedItems} handleAddItem={handleAddItem} handleBuyItem={handleBuyItem}/>
-      </Row>
-      <Row>
-        <NewItem />
       </Row>
       <Row>
         <Trails items={items} seasonSelected={seasonsSelected} trails={trails}/>

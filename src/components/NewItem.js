@@ -8,7 +8,7 @@ export default function NewItem({ handleSubmit }) {
                 <h3 style={{ fontSize: "25px" }}>Create New Item</h3>
                 <label>
                     <div>Name:</div>
-                    <input name="name" type="text" />
+                    <input name="name" type="text"/>
                 </label>
                 <label>
                     <div>Description:</div>
@@ -16,11 +16,11 @@ export default function NewItem({ handleSubmit }) {
                 </label>
                 <label>
                     <div>Image:</div>
-                    <input image="image" type="text" />
+                    <input image="image" type="text"/>
                 </label>
                 <label>
                     <div>Shop URL:</div>
-                    <input shop="shop" type="text" />
+                    <input shop="shop" type="text"/>
                 </label>
                 <button className="btn btn-success" type="submit">Submit</button>
             </form>
