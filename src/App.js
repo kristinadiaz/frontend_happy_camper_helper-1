@@ -45,7 +45,6 @@ export default function App() {
   function handleNewItem(){
     setSeasonsSelected([])
     setAddedItems(itemsTrue())
-
   }
 
   function itemsTrue(){
@@ -76,6 +75,11 @@ export default function App() {
     setSeasonsSelected(4)
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('You Clicked Me!')
+}
+
   return (
     <div className="App">
       <Header className="header" handleHome={handleHome}/>
@@ -89,7 +93,7 @@ export default function App() {
         handleSummer={handleSummer}
       />
       <Row>
-        <NewItem />
+        <NewItem handleSubmit={handleSubmit}/>
       </Row>
       <Row>
         <Trails items={items} seasonSelected={seasonsSelected} trails={trails}/>
